@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node index.js",
     "rebuild:dev": "node-gyp rebuild --debug",
-    "build:dev": "node-gyp build --debug",
+    "build:dev": "npm run config:dev && node-gyp build --debug",
+    "config:dev": "node-gyp configure --debug",
     "clean": "node-gyp clean"
   },
   "author": "",
